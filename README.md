@@ -1,31 +1,23 @@
 
-# rbxts-tape-template
+# exploit-template
 
-This template combines [roblox-ts](https://github.com/roblox-ts/roblox-ts) with [tape](https://github.com/belkworks/tape)!
+This template contains:
+1. A Roact Render Window wrapper
+2. A port of luaparse
+3. My owm AST renderer
+4. Some typescript polyfills
 
-## Foreword
+These are optional dependencies, and you can remove them if you don't need them.
+To do this, remove the folders (luaparse, renderer, ui) and the files (luaUtils.lua, luaparse.d.ts)
+And remove the dependencies (@rbxts/roact, @rbxts/roact-hooked) You can also remove services and Sift, but i recommend keeping them.
 
-This template was made with [pnpm](https://pnpm.io/) in mind, but you can use npm or yarn if you want.
-
-## Output
-
-See [the wiki page](https://github.com/Belkworks/rbxts-tape-template/wiki/Example-Output).
-
-## Getting Started
-
-With GitHub:
-[Click here](https://github.com/belkworks/rbxts-tape-template/generate)
-
-With [degit](https://github.com/Rich-Harris/degit):
-```sh
-degit belkworks/rbxts-tape-template my-project
-cd my-project
+My own typings for Synapse X V3 are also included.
 ```
 
 ## Installation
 
 ```sh
-pnpm install
+yarn install
 ```
 
 ## Watching
@@ -33,25 +25,11 @@ pnpm install
 This will watch for changes in the `src` directory and automatically build them.
 
 ```sh
-pnpm watch
+yarn watch
 ```
 
 ## Building
 
 ```sh
-pnpm build
-```
-
-Additional parameters will be passed to `tape`.
-
-```sh
-pnpm build --output build.lua
-```
-
-## Cleaning
-
-Depending on your application, you may want to do a clean build. This will remove the `out` directory and all of its contents.
-
-```sh
-pnpm clean
+yarn build
 ```
