@@ -1,0 +1,30 @@
+{
+	"name": "synv3-rbxts",
+	"scripts": {
+		"build": "rbxtsc && cpx \"include/**\" out/include && cpx \"node_modules/**/*.lua\" out/include/node_modules -L && tape out",
+		"clean": "rimraf out",
+		"watch": "nodemon -w src -e * -x yarn build"
+	},
+	"devDependencies": {
+		"@rbxts/compiler-types": "2.0.4-types.1",
+		"@rbxts/types": "^1.0.656",
+		"@typescript-eslint/eslint-plugin": "^5.48.1",
+		"@typescript-eslint/parser": "^5.48.1",
+		"cpx": "^1.5.0",
+		"eslint": "^8.31.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-roblox-ts": "^0.0.35",
+		"prettier": "^2.8.2",
+		"rimraf": "^3.0.2",
+		"tape-lua": "3.3.0",
+		"typescript": "^4.9.4"
+	},
+	"dependencies": {
+		"@rbxts/rbxts-exploit-types": "github:4lve/rbxts-exploit-types",
+		"@rbxts/roact": "^1.4.4-ts.0",
+		"@rbxts/roact-hooked": "^2.3.3",
+		"@rbxts/services": "^1.5.1",
+		"@rbxts/sift": "^0.0.5"
+	}
+}
